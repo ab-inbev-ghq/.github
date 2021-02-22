@@ -1,1 +1,15 @@
-name: ghq Organization Actions
+name: Checkmarx SAST Scan
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Checkmarx Scans 
+      uses: checkmarx-ts/checkmarx-github-action@v1.0.3
+      with:
+        cxServer: ${{ secrets.CHECKMARX_SERVER }}
+        cxUsername:  ${{ secrets.CHECKMARX_USER }}
+        cxPassword:  ${{ secrets.CHECKMARX_PASSWD}}
+        cxTeam: \CxServer\AB-InBev\EUR\Test
