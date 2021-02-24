@@ -1,4 +1,4 @@
-name: Checkmarx SAST Scann
+name: Checkmarx SAST Scan
 on: [push]
 jobs:
   build:
