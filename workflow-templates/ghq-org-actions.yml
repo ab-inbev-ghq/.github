@@ -13,3 +13,4 @@ jobs:
         cxUsername:  ${{ secrets.CHECKMARX_USER }}
         cxPassword:  ${{ secrets.CHECKMARX_PASSWD}}
         cxTeam: \CxServer\AB-InBev\EUR\Test
+        cxProjectName: "Example"
